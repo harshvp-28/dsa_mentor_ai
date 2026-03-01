@@ -106,7 +106,8 @@ def build_feature_vector(username):
     if not profile:
         return None
 
-    problems_df = pd.read_csv("data/problems.csv")
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    problems_df = pd.read_csv(os.path.join(BASE_DIR, "data", "problems.csv"))
 
     difficulty_stats = {}
     for item in profile["submitStats"]["acSubmissionNum"]:
