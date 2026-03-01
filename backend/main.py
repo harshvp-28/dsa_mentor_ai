@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="DSA Mentor API", description="Personalized LeetCode problem recommendations")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["https://dsa-mentor-ai-at9b.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
