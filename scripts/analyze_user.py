@@ -11,7 +11,8 @@ def get_attempts_proxy(features, topic):
 
 def get_recommendations(topic, username, features):
     """Get 3 problems (easy, medium, hard) for given topic"""
-    problems_df = pd.read_csv("data/problems.csv")
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    problems_df = pd.read_csv(os.path.join(BASE_DIR, "data", "problems.csv"))
     
     topic_problems = problems_df[problems_df["topic"] == topic]
     
