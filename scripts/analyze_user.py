@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from scripts.fetch_user_profile import build_feature_vector
 
 def calculate_weakness_score(accuracy, attempts_proxy):
