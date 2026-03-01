@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000";
+const API = "https://dsa-mentor-ai-backend-2.onrender.com";
 
 const TOPIC_COLORS = {
   "DP": "#f97316",
