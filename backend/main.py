@@ -11,6 +11,7 @@ app = FastAPI(title="DSA Mentor API", description="Personalized LeetCode problem
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://dsa-mentor-ai-at9b.vercel.app/"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
