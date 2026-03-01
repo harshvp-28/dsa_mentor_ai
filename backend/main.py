@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.recommendation_engine import recommend_problems as get_recs, get_ranked_topics
 from scripts.llm_generator import generate_adaptive_content
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,8 +10,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="DSA Mentor API", description="Personalized LeetCode problem recommendations")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://dsa-mentor-ai-at9b.vercel.app/"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
