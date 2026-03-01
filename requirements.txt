@@ -1,0 +1,8 @@
+requests
+python-dotenv
+google-generativeai
+matplotlib
+pandas
+scikit-learn
+fastapi
+uvicorn

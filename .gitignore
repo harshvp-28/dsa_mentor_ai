@@ -1,0 +1,25 @@
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files
+data/*.png
+
+# VS Code
+.vscode/
+
+# Elbow plot
+data/*.png
+
+.env
+
+node_modules/
+
+dist/
